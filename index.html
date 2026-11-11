@@ -4,8 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&  display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <header class="header header--transparente">
+    <div class="header__barra">
+      <a class="header__logo" href="index.html">Serea</a>
+
+      <!-- Solo se ve en móvil -->
+      <button class="header__boton" type="button" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- En móvil está oculto hasta pulsar el botón -->
+    <nav class="header__nav">
+      <ul class="header__lista">
+        <li><a class="header__link" href="el-camp.html">El camp</a></li>
+        <li><a class="header__link" href="tarifas.html">Tarifas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <img class="hero__logo" src="img/logo-serea-blanco.png" alt="Serea">
+      <p class="hero__subtitulo">Surf Camp</p>
+    </section>
+
+    <!-- FRANJA DE MARCAS -->
+    <section class="marcas">
+      <img src="img/logo-roxy.png" alt="Roxy">
+      <img src="img/logo-surfing.png" alt="Surfing FS">
+      <img src="img/logo-billabong.png" alt="Billabong">
+      <img src="img/logo-roxy.png" alt="Roxy">
+      <img src="img/logo-surfing.png" alt="Surfing FS">
+      <img src="img/logo-billabong.png" alt="Billabong">
+      <img src="img/logo-roxy.png" alt="Roxy">
+    </section>
+
+    <!-- SIGNIFICADO DEL NOMBRE -->
+    <section class="significado">
+      <h1 class="significado__titulo">“Serea”</h1>
+      <p class="significado__texto">Serea significa «sirena» en gallego, un nombre que nos recuerda al mar y a esa sensación de libertad que sentimos cuando estamos cerca de él. Para nosotras, el surf es mucho más que coger olas: es disfrutar de la naturaleza, conocer gente nueva, compartir momentos y vivir experiencias que se quedan contigo. Serea nace de esa forma de entender el mar, como un lugar donde desconectar, pasarlo bien y sentirte libre.</p>
+    </section>
+
+    <!-- PRESENTACIÓN -->
+    <section class="presentacion">
+      <img class="presentacion__foto" src="img/abrazo.jpg" alt="Grupo de chicas abrazándose en la playa con trajes de neopreno azules">
+      <div class="presentacion__contenido">
+        <p class="presentacion__texto">Serea Surf Camp es un campamento de surf para chicas situado en la playa de Razo, Galicia. Ofrecemos una experiencia que combina el aprendizaje del surf con actividades al aire libre, naturaleza y convivencia. Un espacio pensado para disfrutar del océano, mejorar tus habilidades y compartir momentos con otras chicas en un entorno cercano y acogedor.</p>
+        <a class="boton" href="el-camp.html">Saber más</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__col">
+      <h2 class="footer__titulo">Contacto</h2>
+      <ul class="footer__lista">
+        <li>Serea Surf Camp</li>
+        <li>Playa de Razo, Carballo</li>
+        <li>15107 A Coruña - Galicia</li>
+        <li>hola@sereasurfcamp.com</li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h2 class="footer__titulo">Horario</h2>
+      <ul class="footer__lista">
+        <li>Lunes a domingo</li>
+        <li>De 9:00 a 20:00 h</li>
+        <li>Temporada: de junio a septiembre</li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h2 class="footer__titulo">Términos y política</h2>
+      <ul class="footer__lista">
+        <li><a href="#">Términos y condiciones de Uso</a></li>
+        <li><a href="#">Proceso de Compra</a></li>
+        <li><a href="#">Aviso Legal</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- jQuery desde CDN (versión fija) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Nuestro script, siempre después de jQuery -->
+  <script src="js/script.js"></script>
 </body>
 </html>
