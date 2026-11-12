@@ -56,6 +56,9 @@ ul {
   padding: 1.5rem var(--margen-lateral);
   background-color: var(--color-fondo);
   border-bottom: 1px solid var(--color-texto);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
  
 .header__logo,
