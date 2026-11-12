@@ -494,7 +494,7 @@ ul {
 /* ---------- Preguntas frecuentes ---------- */
 .faq {
   display: grid;
-  grid-template-columns: 47fr 53fr;
+  grid-template-columns: 40% 60%;
   align-items: stretch;
 }
  
@@ -515,6 +515,7 @@ ul {
 }
  
 .faq__item {
+  width: 90%;
   border-bottom: 1px solid var(--color-texto);
 }
  
