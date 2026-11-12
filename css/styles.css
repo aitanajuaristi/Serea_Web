@@ -121,13 +121,15 @@ ul {
   font-size: 0.9rem;
   text-transform: uppercase;
   color: var(--color-texto);
+  background-color: transparent;
   border: 1px solid var(--color-texto);
   border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
- 
+
 .boton:hover {
-  background-color: var(--color-texto);
+  background-color: var(--color-rosa);
+  border-color: var(--color-rosa);
   color: var(--color-fondo);
 }
  
@@ -154,18 +156,33 @@ ul {
   font-size: 0.95rem;
 }
  
-/* Franja de logos de marcas */
+/* Franja de logos de marcas: carrusel infinito */
 .marcas {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4rem var(--margen-lateral);
+  overflow: hidden;
+  padding: 4rem 0;
   border-bottom: 1px solid var(--color-texto);
 }
- 
-.marcas img {
+
+.marcas__pista {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marcas-desplazar 25s linear infinite;
+}
+
+.marcas__pista img {
   height: 4.5rem;
   width: auto;
+  margin: 0 4rem;
+}
+
+.marcas__pista .marcas__billabong {
+  height: 7rem;
+}
+
+@keyframes marcas-desplazar {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-25%); }
 }
  
 /* Bloque azul con textura */
