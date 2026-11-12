@@ -4,8 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Camp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<!-- CABECERA (blanca, sin la clase transparente) -->
+  <header class="header">
+    <div class="header__barra">
+      <a class="header__logo" href="index.html">Serea</a>
+
+      <!-- Solo se ve en móvil -->
+      <button class="header__boton" type="button" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- En móvil está oculto hasta pulsar el botón -->
+    <nav class="header__nav">
+      <ul class="header__lista">
+        <li><a class="header__link" href="el-camp.html">El camp</a></li>
+        <li><a class="header__link" href="tarifas.html">Tarifas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- CARRUSEL -->
+    <section class="carrusel">
+      <div class="carrusel__ventana">
+        <div class="carrusel__pista">
+          <img class="carrusel__foto" src="img/carrusel-1.jpg" alt="Chicas surfeando una ola">
+          <img class="carrusel__foto" src="img/carrusel-2.jpg" alt="Playa con tablas de surf rosas">
+          <img class="carrusel__foto" src="img/carrusel-3.jpg" alt="Dos chicas sonriendo tumbadas en el césped">
+          <img class="carrusel__foto" src="img/carrusel-4.jpg" alt="Chica agachada junto a una tabla blanca">
+          <img class="carrusel__foto" src="img/carrusel-5.jpg" alt="Chicas patinando en un parque">
+          <img class="carrusel__foto" src="img/carrusel-6.jpg" alt="Chicas haciendo un picnic sobre el césped">
+        </div>
+      </div>
+      <!-- Los puntos los crea carrusel.js -->
+      <div class="carrusel__puntos"></div>
+    </section>
+
+    <!-- TEXTO DE PRESENTACIÓN -->
+    <section class="camp-intro">
+      <p class="camp-intro__texto">Serea Surf Camp nace en 2022 de la mano de un grupo de amigas gallegas que compartían su pasión por el surf. Después de años recorriendo diferentes playas, decidieron crear su propio campamento en Razo, un lugar con el que siempre habían tenido una conexión especial. Lo que comenzó como una pequeña iniciativa entre amigas fue creciendo hasta convertirse en un espacio que reúne cada verano a chicas de diferentes lugares. Con el tiempo, Serea ha incorporado nuevas actividades y experiencias, manteniendo siempre la cercanía, el compañerismo y el respeto por el mar que dieron origen al proyecto.</p>
+    </section>
+
+    <!-- ¿QUÉ HACEMOS EN SEREA? -->
+    <section class="actividades">
+      <img class="actividades__foto" src="img/que-hacemos.jpg" alt="Chicas haciendo yoga frente al mar">
+
+      <div class="actividades__panel">
+        <h2 class="actividades__titulo">¿Qué hacemos<br>en Serea?</h2>
+        <p class="actividades__intro">Mucho más que surf: experiencias para disfrutar, aprender y conectar con el mar.</p>
+
+        <div class="actividades__lista">
+          <article class="actividad">
+            <h3 class="actividad__titulo">Surf</h3>
+            <p class="actividad__texto">Aprende a surfear o mejora tu técnica con clases adaptadas a todos los niveles. Disfruta de las olas de Galicia acompañada de nuestras monitoras y gana confianza en el agua.</p>
+          </article>
+
+          <article class="actividad">
+            <h3 class="actividad__titulo">Skate</h3>
+            <p class="actividad__texto">Practica surfskate para mejorar el equilibrio, la coordinación y los movimientos sobre la tabla. Una forma divertida de seguir aprendiendo surf fuera del agua.</p>
+          </article>
+
+          <article class="actividad">
+            <h3 class="actividad__titulo">Yoga</h3>
+            <p class="actividad__texto">Conecta con tu cuerpo y encuentra el equilibrio a través de sesiones de yoga al aire libre. Un momento para relajarte, estirar y desconectar después de cada jornada de surf.</p>
+          </article>
+
+          <article class="actividad">
+            <h3 class="actividad__titulo">Actividades</h3>
+            <p class="actividad__texto">Descubre la costa gallega con excursiones, rutas por la naturaleza, juegos en grupo y planes al atardecer. Experiencias para compartir, divertirte y crear nuevas amistades.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUESTRA CASA -->
+    <section class="casa">
+      <div class="casa__fotos">
+        <img class="casa__foto" src="img/casa-1.jpg" alt="Mesa preparada en el jardín de la casa">
+        <img class="casa__foto" src="img/casa-2.jpg" alt="Jardín de la casa con árboles y un coche">
+        <img class="casa__foto" src="img/casa-3.jpg" alt="Chicas sentadas en el césped junto a las tablas de surf">
+      </div>
+
+      <h2 class="casa__titulo">Nuestra casa</h2>
+      <p class="casa__texto">En Serea queremos que te sientas como en casa. Nuestro alojamiento, situado a tan solo 200 metros de la playa de Razo, es un espacio acogedor rodeado de naturaleza, pensado para descansar después de cada sesión de surf. Cuenta con habitaciones compartidas, zonas comunes y espacios al aire libre donde relajarse, convivir y compartir momentos con otras chicas.</p>
+    </section>
+
+    <!-- MAPA -->
+    <section class="mapa">
+      <iframe
+        class="mapa__iframe"
+        src="https://www.google.com/maps?q=Special+Surf+School+%26+Camp+Rodiles&output=embed"
+        title="Mapa de la ubicación de Serea Surf Camp"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="faq">
+      <img class="faq__foto" src="img/faq.jpg" alt="Chicas con tablas de surf sobre un acantilado verde">
+
+      <div class="faq__contenido">
+        <h2 class="faq__titulo">Preguntas frecuentes</h2>
+
+        <div class="faq__item">
+          <button type="button" class="faq__pregunta">¿Necesito experiencia previa en surf?</button>
+          <div class="faq__respuesta">
+            <p>Texto de la respuesta.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button type="button" class="faq__pregunta">¿Tengo que llevar mi propio material?</button>
+          <div class="faq__respuesta">
+            <p>Texto de la respuesta.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button type="button" class="faq__pregunta">¿Cómo se organizan los grupos de surf?</button>
+          <div class="faq__respuesta">
+            <p>Texto de la respuesta.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button type="button" class="faq__pregunta">¿Qué debo llevar al campamento?</button>
+          <div class="faq__respuesta">
+            <p>Texto de la respuesta.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button type="button" class="faq__pregunta">¿Qué ocurre si las condiciones del mar no permiten surfear?</button>
+          <div class="faq__respuesta">
+            <p>Texto de la respuesta.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button type="button" class="faq__pregunta">¿Qué pasa si necesito cancelar mi reserva?</button>
+          <div class="faq__respuesta">
+            <p>Texto de la respuesta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__col">
+      <h2 class="footer__titulo">Contacto</h2>
+      <ul class="footer__lista">
+        <li>Serea Surf Camp</li>
+        <li>Playa de Razo, Carballo</li>
+        <li>15107 A Coruña - Galicia</li>
+        <li>hola@sereasurfcamp.com</li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h2 class="footer__titulo">Horario</h2>
+      <ul class="footer__lista">
+        <li>Lunes a domingo</li>
+        <li>De 9:00 a 20:00 h</li>
+        <li>Temporada: de junio a septiembre</li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h2 class="footer__titulo">Términos y política</h2>
+      <ul class="footer__lista">
+        <li><a href="#">Términos y condiciones de Uso</a></li>
+        <li><a href="#">Proceso de Compra</a></li>
+        <li><a href="#">Aviso Legal</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- jQuery desde CDN (versión fija) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Común a todas las páginas: menú y cabecera -->
+  <script src="js/script.js"></script>
+  <!-- Solo en El Camp -->
+  <script src="js/carrusel.js"></script>
+  <script src="js/faq.js"></script>    
     
 </body>
 </html>

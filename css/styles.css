@@ -322,4 +322,228 @@ ul {
   }
 
 }
+
+
+/* ==========================================================
+   PÁGINA EL CAMP
+   Pega todo este bloque en styles.css, antes de la
+   sección "7. RESPONSIVE".
+   ========================================================== */
+ 
+/* ---------- Carrusel de fotos ---------- */
+.carrusel {
+  padding: 6rem 0 0;
+}
+ 
+.carrusel__ventana {
+  overflow: hidden;
+}
+ 
+.carrusel__pista {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.6s ease;
+}
+ 
+.carrusel__foto {
+  flex: 0 0 auto;
+  height: clamp(18rem, 32vw, 30rem);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+ 
+.carrusel__puntos {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+ 
+.carrusel__punto {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-texto);
+  opacity: 0.25;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+ 
+.carrusel__punto.activo {
+  opacity: 1;
+}
+ 
+/* ---------- Texto bajo el carrusel ---------- */
+.camp-intro {
+  padding: 5rem var(--margen-lateral) 7rem;
+  text-align: center;
+}
+ 
+.camp-intro__texto {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+ 
+/* ---------- ¿Qué hacemos en Serea? ---------- */
+.actividades {
+  display: grid;
+  grid-template-columns: 43fr 57fr;
+  border-top: 1px solid var(--color-texto);
+  border-bottom: 1px solid var(--color-texto);
+}
+ 
+.actividades__foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+.actividades__panel {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3.5rem;
+  color: #ffffff;
+  background: var(--color-rosa) url("../img/textura-rosa.jpg") center / cover;
+}
+ 
+.actividades__titulo {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+ 
+.actividades__intro {
+  max-width: 26rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+ 
+.actividades__lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem 2rem;
+  margin-top: auto;
+  padding-top: 4rem;
+}
+ 
+.actividad__titulo {
+  margin-bottom: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+ 
+.actividad__texto {
+  font-size: 0.8rem;
+}
+ 
+/* ---------- Nuestra casa ---------- */
+.casa {
+  padding: 5rem var(--margen-lateral);
+}
+ 
+.casa__fotos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+ 
+.casa__foto {
+  width: 100%;
+  aspect-ratio: 254 / 240;
+  object-fit: cover;
+}
+ 
+.casa__titulo {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+ 
+.casa__texto {
+  max-width: 62rem;
+  font-size: 0.9rem;
+}
+ 
+/* ---------- Mapa ---------- */
+.mapa {
+  padding: 0 var(--margen-lateral) 5rem;
+}
+ 
+.mapa__iframe {
+  display: block;
+  width: 100%;
+  height: 28rem;
+  border: 0;
+}
+ 
+/* ---------- Preguntas frecuentes ---------- */
+.faq {
+  display: grid;
+  grid-template-columns: 47fr 53fr;
+  align-items: stretch;
+}
+ 
+.faq__foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+.faq__contenido {
+  padding: 5rem var(--margen-lateral);
+}
+ 
+.faq__titulo {
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+ 
+.faq__item {
+  border-bottom: 1px solid var(--color-texto);
+}
+ 
+.faq__pregunta {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.2rem 0;
+  font: inherit;
+  font-size: 0.9rem;
+  text-align: left;
+  color: var(--color-texto);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+ 
+/* El + a la derecha, creado con CSS */
+.faq__pregunta::after {
+  content: "+";
+  margin-left: auto;
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+ 
+/* Clase que añade jQuery: el + gira y se convierte en x */
+.faq__pregunta.abierto::after {
+  transform: rotate(45deg);
+}
+ 
+/* Respuesta oculta por defecto: jQuery la despliega */
+.faq__respuesta {
+  display: none;
+  padding-bottom: 1.2rem;
+  font-size: 0.9rem;
+}
+ 
+
+
  
