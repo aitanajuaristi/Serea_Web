@@ -13,7 +13,8 @@
 </head>
 
 <body>
-<header class="header">
+<body>
+  <header class="header">
     <div class="header__barra">
       <a class="header__logo" href="index.html">Serea</a>
 
@@ -32,7 +33,85 @@
         <li><a class="header__link" href="tarifas.html">Tarifas</a></li>
       </ul>
     </nav>
-  </header>    
+  </header>
+
+  <main>
+
+    <!-- ELIGE TU EXPERIENCIA -->
+    <section class="tarifas">
+      <h1 class="tarifas__titulo">Elige tu experiencia</h1>
+
+      <div class="tarifas__lista">
+
+        <a class="tarifa" href="compra.html?tarifa=junior">
+          <img class="tarifa__foto" src="img/tarifa-junior.jpg" alt="Ilustración de una tabla de surf en azul">
+          <h2 class="tarifa__nombre">Serea Junior -18</h2>
+          <p class="tarifa__texto">Incluye 7 días y 6 noches de alojamiento compartido, pensión completa, clases diarias de surf con material incluido, actividades deportivas y recreativas, excursiones y supervisión de monitores durante toda la estancia.</p>
+          <p class="tarifa__precio">650€</p>
+        </a>
+
+        <a class="tarifa" href="compra.html?tarifa=adults">
+          <img class="tarifa__foto" src="img/tarifa-adults.jpg" alt="Ilustración de una tabla de surf en rosa">
+          <h2 class="tarifa__nombre">Serea Adults +18</h2>
+          <p class="tarifa__texto">Incluye 7 días y 6 noches de alojamiento compartido, clases diarias de surf con material incluido, desayunos, sesiones de yoga, surfskate y diferentes actividades para disfrutar del mar y conocer a otras chicas.</p>
+          <p class="tarifa__precio">590€</p>
+        </a>
+
+        <a class="tarifa" href="compra.html?tarifa=day">
+          <img class="tarifa__foto" src="img/tarifa-day.jpg" alt="Ilustración de una tabla de surf en crema">
+          <h2 class="tarifa__nombre">Serea Day</h2>
+          <p class="tarifa__texto">Incluye una jornada de surf con monitores, todo el material necesario, una actividad complementaria de yoga o surfskate y un picnic para disfrutar de un día completo en Serea.</p>
+          <p class="tarifa__precio">75€</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- TODAS LAS TARIFAS INCLUYEN -->
+    <section class="incluye">
+      <h2 class="incluye__titulo">Todas las tarifas incluyen</h2>
+      <p class="incluye__texto">Clases de surf adaptadas a cada nivel, material necesario y acompañamiento de monitoras profesionales. Además, durante la experiencia realizamos fotografías y vídeos para que puedas llevarte un recuerdo de tus días en Serea, siempre con tu consentimiento.</p>
+    </section>
+
+    <!-- FOTO DE LA PLAYA -->
+    <img class="tarifas-playa" src="img/tarifas-playa.jpg" alt="Vista de la playa de Razo en blanco y negro">
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__col">
+      <h2 class="footer__titulo">Contacto</h2>
+      <ul class="footer__lista">
+        <li>Serea Surf Camp</li>
+        <li>Playa de Razo, Carballo</li>
+        <li>15107 A Coruña - Galicia</li>
+        <li>hola@sereasurfcamp.com</li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h2 class="footer__titulo">Horario</h2>
+      <ul class="footer__lista">
+        <li>Lunes a domingo</li>
+        <li>De 9:00 a 20:00 h</li>
+        <li>Temporada: de junio a septiembre</li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h2 class="footer__titulo">Términos y política</h2>
+      <ul class="footer__lista">
+        <li><a href="#">Términos y condiciones de Uso</a></li>
+        <li><a href="#">Proceso de Compra</a></li>
+        <li><a href="#">Aviso Legal</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- jQuery desde CDN (versión fija) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Común a todas las páginas: menú y cabecera -->
+  <script src="js/script.js"></script>
+</body>
+</html>
     
 </body>
 </html>
