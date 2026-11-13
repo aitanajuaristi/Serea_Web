@@ -4,8 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+<!-- BARRA SUPERIOR: solo la flecha para volver a Tarifas -->
+  <header class="compra-barra">
+    <a class="compra-barra__volver" href="tarifas.html" aria-label="Volver a tarifas">
+      <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M10 2L2 10L10 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </header>
+
+  <main class="compra">
+
+    <!-- COLUMNA IZQUIERDA: resumen de la reserva -->
+    <section class="reserva-col">
+      <h1 class="compra__titulo">Tu reserva</h1>
+
+      <!-- compra.js cambia el color, el texto y el precio según la tarifa -->
+      <article class="reserva reserva--junior">
+        <h2 class="reserva__marca">Serea Surf Camp</h2>
+        <p class="reserva__texto">Incluye 7 días y 6 noches de alojamiento compartido, pensión completa, clases diarias de surf con material incluido, actividades deportivas y recreativas, excursiones y supervisión de monitores durante toda la estancia.</p>
+
+        <div class="reserva__pie">
+          <div>
+            <p class="reserva__etiqueta">Reserva</p>
+            <p class="reserva__nombre">Serea Junior -18</p>
+          </div>
+          <p class="reserva__precio">650€</p>
+        </div>
+      </article>
+
+      <div class="reserva-col__logo">
+        <img src="img/logo-serea-negro.png" alt="Serea">
+        <p>Surf Camp</p>
+      </div>
+    </section>
+
+    <!-- COLUMNA DERECHA: formulario -->
+    <section class="pago-col">
+      <form class="pago" action="#">
+
+        <h2 class="compra__titulo">Información de contacto</h2>
+
+        <input class="campo" type="text" name="nombre" placeholder="Nombre y apellidos *" aria-label="Nombre y apellidos" required>
+
+        <div class="pago__fila">
+          <input class="campo" type="email" name="email" placeholder="Correo electrónico *" aria-label="Correo electrónico" required>
+          <input class="campo" type="tel" name="telefono" placeholder="Teléfono *" aria-label="Teléfono" required>
+        </div>
+
+        <!-- SEMANAS: desplegable con casillas, se puede elegir más de una -->
+        <p class="pago__etiqueta" id="semanas-etiqueta">Semanas del campamento *</p>
+
+        <div class="semanas" id="semanas">
+          <button type="button" class="semanas__boton" aria-expanded="false" aria-controls="semanas-lista" aria-labelledby="semanas-etiqueta">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="1.5" y="3" width="17" height="15.5" rx="1.5" stroke="currentColor" stroke-width="2"/>
+              <path d="M1.5 8H18.5" stroke="currentColor" stroke-width="2"/>
+              <path d="M6 1V5M14 1V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="semanas__texto">Selecciona una semana</span>
+            <svg class="semanas__flecha" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M2 2L8 8L14 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <!-- Pon aquí las fechas reales de cada semana -->
+          <div class="semanas__lista" id="semanas-lista">
+            <label class="semanas__opcion">
+              <input type="checkbox" name="semanas" value="Semana 1">
+              <span>Semana 1</span>
+            </label>
+            <label class="semanas__opcion">
+              <input type="checkbox" name="semanas" value="Semana 2">
+              <span>Semana 2</span>
+            </label>
+            <label class="semanas__opcion">
+              <input type="checkbox" name="semanas" value="Semana 3">
+              <span>Semana 3</span>
+            </label>
+            <label class="semanas__opcion">
+              <input type="checkbox" name="semanas" value="Semana 4">
+              <span>Semana 4</span>
+            </label>
+          </div>
+        </div>
+
+        <h2 class="compra__titulo compra__titulo--pago">Método de pago</h2>
+
+        <div class="tarjeta">
+          <p class="tarjeta__titulo">
+            <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="1.5" y="1.5" width="27" height="21" rx="2.5" stroke="currentColor" stroke-width="3"/>
+              <rect x="1.5" y="6" width="27" height="4" fill="currentColor"/>
+            </svg>
+            Tarjeta
+          </p>
+
+          <label class="tarjeta__etiqueta" for="numero">Información de la tarjeta</label>
+          <div class="tarjeta__campos">
+            <input class="tarjeta__numero" type="text" id="numero" name="numero" placeholder="1234 1234 1234 1234" inputmode="numeric" autocomplete="cc-number" required>
+            <div class="tarjeta__fila">
+              <input type="text" name="caducidad" placeholder="MM / AA" aria-label="Caducidad" autocomplete="cc-exp" required>
+              <input type="text" name="cvc" placeholder="CVC" aria-label="CVC" inputmode="numeric" autocomplete="cc-csc" required>
+            </div>
+          </div>
+
+          <label class="tarjeta__etiqueta" for="titular">Nombre del titular</label>
+          <input class="campo campo--tarjeta" type="text" id="titular" name="titular" placeholder="Nombre completo" autocomplete="cc-name" required>
+        </div>
+
+        <label class="acepto">
+          <input type="checkbox" name="acepto" required>
+          <span>Acepto los <a href="#">términos y condiciones</a> de uso y la <a href="#">política de privacidad</a>.</span>
+        </label>
+
+        <button class="pagar" type="submit">Pagar</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__col">
+      <h2 class="footer__titulo">Contacto</h2>
+      <ul class="footer__lista">
+        <li>Serea Surf Camp</li>
+        <li>Playa de Razo, Carballo</li>
+        <li>15107 A Coruña - Galicia</li>
+        <li>hola@sereasurfcamp.com</li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h2 class="footer__titulo">Horario</h2>
+      <ul class="footer__lista">
+        <li>Lunes a domingo</li>
+        <li>De 9:00 a 20:00 h</li>
+        <li>Temporada: de junio a septiembre</li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h2 class="footer__titulo">Términos y política</h2>
+      <ul class="footer__lista">
+        <li><a href="#">Términos y condiciones de Uso</a></li>
+        <li><a href="#">Proceso de Compra</a></li>
+        <li><a href="#">Aviso Legal</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- VENTANA MODAL: se abre cuando el formulario es correcto -->
+  <div class="modal" id="modal">
+    <div class="modal__caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <button type="button" class="modal__cerrar" aria-label="Cerrar">×</button>
+
+      <h2 class="modal__titulo" id="modal-titulo">Reserva confirmada</h2>
+      <p class="modal__texto">Gracias, <span id="modal-nombre"></span>. Hemos recibido tu reserva.</p>
+
+      <dl class="modal__resumen">
+        <div>
+          <dt>Tarifa</dt>
+          <dd id="modal-tarifa"></dd>
+        </div>
+        <div>
+          <dt>Semanas</dt>
+          <dd id="modal-semanas"></dd>
+        </div>
+        <div>
+          <dt>Total</dt>
+          <dd id="modal-precio"></dd>
+        </div>
+      </dl>
+
+      <a class="modal__boton" href="index.html">Volver al inicio</a>
+    </div>
+  </div>
+
+  <!-- jQuery desde CDN (versión fija) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Solo en la página de compra: tarifa, semanas, validación y modal -->
+  <script src="js/compra.js"></script>    
     
 </body>
 </html>
