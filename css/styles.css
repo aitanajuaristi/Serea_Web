@@ -592,6 +592,7 @@ ul {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 /* Al pasar el ratón: la tarjeta sube un poco y la sombra crece */
 .tarifa:hover {
   transform: translateY(-8px);
@@ -603,6 +604,8 @@ ul {
   aspect-ratio: 417 / 481;
   object-fit: cover;
 }
+
+
  
 .tarifa__nombre {
   margin-top: 2rem;
@@ -612,6 +615,7 @@ ul {
   text-transform: uppercase;
   border-bottom: 1px solid var(--color-texto);
 }
+
  
 .tarifa__texto {
   margin-top: 0.8rem;
@@ -619,6 +623,7 @@ ul {
   font-size: 0.95rem;
   line-height: 1.35;
 }
+
  
 .tarifa__precio {
   margin-top: auto;
