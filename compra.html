@@ -13,7 +13,8 @@
 </head>
 
 <body>
-<!-- BARRA SUPERIOR: solo la flecha para volver a Tarifas -->
+
+  <!-- BARRA SUPERIOR: solo la flecha para volver a Tarifas -->
   <header class="compra-barra">
     <a class="compra-barra__volver" href="tarifas.html" aria-label="Volver a tarifas">
       <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -61,41 +62,53 @@
           <input class="campo" type="tel" name="telefono" placeholder="Teléfono *" aria-label="Teléfono" required>
         </div>
 
-        <!-- SEMANAS: desplegable con casillas, se puede elegir más de una -->
-        <p class="pago__etiqueta" id="semanas-etiqueta">Semanas del campamento *</p>
+        <!-- SEMANAS (Junior y Adults): desplegable con casillas, se puede elegir más de una -->
+        <div class="seleccion seleccion--semanas">
+          <p class="pago__etiqueta" id="semanas-etiqueta">Semanas del campamento *</p>
 
-        <div class="semanas" id="semanas">
-          <button type="button" class="semanas__boton" aria-expanded="false" aria-controls="semanas-lista" aria-labelledby="semanas-etiqueta">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="1.5" y="3" width="17" height="15.5" rx="1.5" stroke="currentColor" stroke-width="2"/>
-              <path d="M1.5 8H18.5" stroke="currentColor" stroke-width="2"/>
-              <path d="M6 1V5M14 1V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            <span class="semanas__texto">Selecciona una semana</span>
-            <svg class="semanas__flecha" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M2 2L8 8L14 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
+          <div class="semanas" id="semanas">
+            <button type="button" class="semanas__boton" aria-expanded="false" aria-controls="semanas-lista" aria-labelledby="semanas-etiqueta">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="1.5" y="3" width="17" height="15.5" rx="1.5" stroke="currentColor" stroke-width="2"/>
+                <path d="M1.5 8H18.5" stroke="currentColor" stroke-width="2"/>
+                <path d="M6 1V5M14 1V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="semanas__texto">Selecciona una semana</span>
+              <svg class="semanas__flecha" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M2 2L8 8L14 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
 
-          <!-- Pon aquí las fechas reales de cada semana -->
-          <div class="semanas__lista" id="semanas-lista">
-            <label class="semanas__opcion">
-              <input type="checkbox" name="semanas" value="Semana 1">
-              <span>Semana 1</span>
-            </label>
-            <label class="semanas__opcion">
-              <input type="checkbox" name="semanas" value="Semana 2">
-              <span>Semana 2</span>
-            </label>
-            <label class="semanas__opcion">
-              <input type="checkbox" name="semanas" value="Semana 3">
-              <span>Semana 3</span>
-            </label>
-            <label class="semanas__opcion">
-              <input type="checkbox" name="semanas" value="Semana 4">
-              <span>Semana 4</span>
-            </label>
+            <!-- Pon aquí las fechas reales de cada semana -->
+            <div class="semanas__lista" id="semanas-lista">
+              <label class="semanas__opcion">
+                <input type="checkbox" name="semanas" value="Semana 1 · 22-28 jun">
+                <span>Semana 1</span>
+                <span class="semanas__fechas">22 - 28 de junio</span>
+              </label>
+              <label class="semanas__opcion">
+                <input type="checkbox" name="semanas" value="Semana 2 · 13-19 jul">
+                <span>Semana 2</span>
+                <span class="semanas__fechas">13 - 19 de julio</span>
+              </label>
+              <label class="semanas__opcion">
+                <input type="checkbox" name="semanas" value="Semana 3 · 10-16 ago">
+                <span>Semana 3</span>
+                <span class="semanas__fechas">10 - 16 de agosto</span>
+              </label>
+              <label class="semanas__opcion">
+                <input type="checkbox" name="semanas" value="Semana 4 · 7-13 sep">
+                <span>Semana 4</span>
+                <span class="semanas__fechas">7 - 13 de septiembre</span>
+              </label>
+            </div>
           </div>
+        </div>
+
+        <!-- DÍA (solo Serea Day): un único día dentro de la temporada -->
+        <div class="seleccion seleccion--dia">
+          <label class="pago__etiqueta" for="dia">Día de la jornada *</label>
+          <input class="campo" type="date" id="dia" name="dia" min="2027-06-01" max="2027-09-30">
         </div>
 
         <h2 class="compra__titulo compra__titulo--pago">Método de pago</h2>
@@ -167,8 +180,8 @@
     <div class="modal__caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
       <button type="button" class="modal__cerrar" aria-label="Cerrar">×</button>
 
-      <h2 class="modal__titulo" id="modal-titulo">Reserva confirmada</h2>
-      <p class="modal__texto">Gracias, <span id="modal-nombre"></span>. Hemos recibido tu reserva.</p>
+      <h2 class="modal__titulo" id="modal-titulo">Reserva Confirmada</h2>
+      <p class="modal__texto">Gracias, <span id="modal-nombre"></span> ¡Nos vemos pronto en Serea!</p>
 
       <dl class="modal__resumen">
         <div>
@@ -176,7 +189,7 @@
           <dd id="modal-tarifa"></dd>
         </div>
         <div>
-          <dt>Semanas</dt>
+          <dt id="modal-etiqueta">Semana</dt>
           <dd id="modal-semanas"></dd>
         </div>
         <div>
@@ -191,8 +204,7 @@
 
   <!-- jQuery desde CDN (versión fija) -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- Solo en la página de compra: tarifa, semanas, validación y modal -->
-  <script src="js/compra.js"></script>    
-    
+  <!-- Solo en la página de compra: tarifa, semanas/día, validación y modal -->
+  <script src="js/compra.js"></script>
 </body>
-</html>
+
