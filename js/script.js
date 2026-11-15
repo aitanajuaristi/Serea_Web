@@ -19,3 +19,20 @@ $(".header__boton").on("click", function () {
   $(this).toggleClass("abierto");
   actualizarCabecera();
 });
+
+
+// ---------- ANIMACIONES AL HACER SCROLL (AOS) ----------
+if (typeof AOS !== "undefined") {
+  AOS.init({
+    duration: 800,       // más rápido que los 2000 del ejemplo: aquí es contenido real
+    offset: 100,
+    easing: "ease-out",
+    once: true,          // solo se anima la primera vez
+    disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  });
+
+  // Cuando cargan las imágenes cambian las alturas: AOS recalcula
+  $(window).on("load", function () {
+    AOS.refresh();
+  });
+}

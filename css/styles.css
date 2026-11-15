@@ -32,6 +32,8 @@ body {
   line-height: 1.5;
   color: var(--color-texto);
   background-color: var(--color-fondo);
+  overflow-x: hidden;
+
 }
  
 img {
