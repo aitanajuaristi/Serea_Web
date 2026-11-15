@@ -558,97 +558,94 @@ ul {
   font-size: 0.9rem;
 }
 
-
 /* ==========================================================
    PÁGINA TARIFAS
-   Pega este bloque en styles.css, antes de la
-   sección "7. RESPONSIVE".
+   Sustituye todo el bloque de Tarifas de styles.css por este
+   (va antes de la sección "7. RESPONSIVE").
    ========================================================== */
- 
+
 /* ---------- Elige tu experiencia ---------- */
 .tarifas {
-  padding: 6rem var(--margen-lateral) 5rem;
+  padding: 5rem var(--margen-lateral) 4rem;
 }
- 
+
 .tarifas__titulo {
-  margin-bottom: 1.5rem;
-  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
+  text-align: center;
 }
- 
+
 .tarifas__lista {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 24rem));
+  justify-content: center;
   gap: 2.5rem;
 }
- 
+
 /* Tarjeta: la altura es igual en las tres y el precio queda abajo */
 .tarifa {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1.5rem;
   border: 1px solid var(--color-texto);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 /* Al pasar el ratón: la tarjeta sube un poco y la sombra crece */
 .tarifa:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
- 
+
+/* La imagen mantiene su proporción: no se recorta */
 .tarifa__foto {
+  display: block;
   width: 100%;
-  aspect-ratio: 417 / 481;
-  object-fit: cover;
+  height: auto;
 }
 
-
- 
 .tarifa__nombre {
-  margin-top: 2rem;
-  padding-bottom: 0.6rem;
-  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
   border-bottom: 1px solid var(--color-texto);
 }
 
- 
 .tarifa__texto {
-  margin-top: 0.8rem;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+  margin-top: 0.7rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.85rem;
   line-height: 1.35;
 }
 
- 
 .tarifa__precio {
   margin-top: auto;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
- 
+
 /* ---------- Todas las tarifas incluyen ---------- */
 .incluye {
   padding: 2rem var(--margen-lateral) 6rem;
   text-align: center;
 }
- 
+
 .incluye__titulo {
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
   font-weight: 400;
 }
- 
+
 .incluye__texto {
   max-width: 43rem;
   margin: 0 auto;
   font-size: 0.95rem;
   line-height: 1.35;
 }
- 
+
 /* ---------- Foto de la playa ---------- */
 .tarifas-playa {
   width: 100%;
@@ -981,7 +978,7 @@ ul {
   flex-shrink: 0;
   width: 1.4rem;
   height: 1.4rem;
-  accent-color: var(--color-rosa);
+  accent-color: var(--color-texto);
   cursor: pointer;
 }
 
@@ -1005,7 +1002,7 @@ ul {
 }
 
 .pagar:hover {
-  background-color: var(--color-texto);
+  background-color: #8f4a4f;
 }
 
 /* ---------- Validación del formulario ---------- */
