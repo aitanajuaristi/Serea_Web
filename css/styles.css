@@ -453,6 +453,8 @@ ul {
   grid-template-columns: 43% 57%;
   height: 620px;
   overflow: hidden;
+  border-top: 1px solid var(--color-texto);
+  border-bottom: 1px solid var(--color-texto);
 }
 
 .actividades__foto {
@@ -470,6 +472,7 @@ ul {
   padding: 2rem 3.5rem;
   color: #ffffff;
   background: var(--color-rosa) url("../img/textura-rosa.jpg") center / cover;
+  border-left: 1px solid var(--color-texto);
 }
 
 .actividades__titulo {
