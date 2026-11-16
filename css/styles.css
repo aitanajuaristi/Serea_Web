@@ -522,7 +522,6 @@ ul {
 }
 
 .tarifa__foto {
-  display: block;
   width: 100%;
   height: auto;
 }
@@ -592,7 +591,7 @@ ul {
 .compra {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: calc(100vh - 4rem);   /* 4rem = altura de la barra con la flecha */
+  min-height: calc(100vh - 4rem);  
 }
 
 .compra__titulo {
@@ -913,6 +912,7 @@ ul {
   background-color: #8f4a4f;
 }
 
+/* VALIDACIÓN */
 .campo-caja {
   display: flex;
   flex-direction: column;
@@ -979,18 +979,13 @@ ul {
   line-height: 1.15;
 }
 
-
 .modal__texto {
   margin-bottom: 1.5rem;
-  font-size: 1rem;
-  font-weight: 400;
 }
 
 .modal__resumen {
   margin-bottom: 1.5rem;
   text-align: left;
-  font-size: 1rem;
-  font-weight: 400;
   border: 1px solid var(--color-texto);
   border-radius: 8px;
   overflow: hidden;
