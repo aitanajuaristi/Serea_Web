@@ -1028,41 +1028,16 @@ ul {
   background-color: var(--color-texto);
 }
 
-/* ==========================================================
-   7. RESPONSIVE
-   Tablet: hasta 1024px · Móvil: hasta 767px
-   (El camp y Tarifas, pendientes)
-   ========================================================== */
+/* RESPONSIVE  */
 
-/* El menú siempre visible en escritorio.
-   !important porque jQuery deja un display en línea al plegarlo en móvil */
-@media (min-width: 768px) {
-  .header__nav {
-    display: block !important;
-    max-height: none;
-  }
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-main {
-  overflow-x: clip; /* el parallax no genera scroll horizontal */
-}
-
-
-/* ==========================================================
-   TABLET
-   ========================================================== */
+/* TABLET  */
 @media (max-width: 1024px) {
 
   :root {
     --margen-lateral: 32px;
   }
 
-  /* HOME */
+  /* HERO */
   .hero {
     padding-bottom: 64px;
   }
@@ -1071,6 +1046,7 @@ main {
     width: 176px;
   }
 
+  /* MARCAS */
   .marcas {
     padding: 40px 0;
   }
@@ -1084,16 +1060,18 @@ main {
     height: 80px;
   }
 
+  /* SIGNIFICADO */
   .significado {
     padding: 80px var(--margen-lateral);
   }
 
+  /* PRESENTACIÓN */
   .presentacion {
     gap: 32px;
     padding: 64px var(--margen-lateral);
   }
 
-  /* FOOTER: marca arriba y 3 columnas debajo */
+  /* FOOTER */
   .footer {
     padding: 48px var(--margen-lateral) 40px;
   }
@@ -1129,7 +1107,7 @@ main {
     grid-column: 1;
   }
 
-   /* EL CAMP */
+  /* CARRUSEL */
   .carrusel {
     padding: 80px 0 0;
   }
@@ -1146,11 +1124,12 @@ main {
     margin-top: 24px;
   }
 
+  /* INTRODUCCIÓN */
   .camp-intro {
     padding: 64px var(--margen-lateral) 80px;
   }
 
-  /* La altura fija de 620px se quita: el contenido manda */
+  /* ACTIVIDADES */
   .actividades {
     grid-template-columns: 38% 62%;
     height: auto;
@@ -1166,6 +1145,7 @@ main {
     padding-right: 0;
   }
 
+  /* CASA */
   .casa {
     padding: 64px var(--margen-lateral);
   }
@@ -1178,6 +1158,7 @@ main {
     margin-top: 48px;
   }
 
+  /* MAPA */
   .mapa {
     padding: 0 var(--margen-lateral) 64px;
   }
@@ -1186,6 +1167,7 @@ main {
     height: 400px;
   }
 
+  /* FAQ */
   .faq {
     grid-template-columns: 35% 65%;
   }
@@ -1198,8 +1180,7 @@ main {
     width: 100%;
   }
 
-   /* TARIFAS */
-  /* Las 3 tarjetas no caben en fila con 24rem: se ajustan al ancho disponible */
+  /* TARIFAS */
   .tarifas {
     padding: 64px var(--margen-lateral) 48px;
   }
@@ -1225,10 +1206,12 @@ main {
     margin-bottom: 16px;
   }
 
+  /* INCLUYE */
   .incluye {
     padding: 24px var(--margen-lateral) 80px;
   }
 
+  /* PLAYA */
   .tarifas-playa {
     aspect-ratio: 2 / 1;
   }
@@ -1254,7 +1237,6 @@ main {
     width: 160px;
   }
 
-  /* Email y teléfono caben mal lado a lado en columnas estrechas */
   .pago__fila {
     grid-template-columns: 1fr;
   }
@@ -1265,9 +1247,7 @@ main {
 }
 
 
-/* ==========================================================
-   MÓVIL
-   ========================================================== */
+/* MÓVIL */
 @media (max-width: 767px) {
 
   :root {
@@ -1346,7 +1326,7 @@ main {
     justify-content: center;
   }
 
-  /* HOME */
+  /* HERO */
   .hero {
     height: 100svh;
     min-height: 500px;
@@ -1357,6 +1337,7 @@ main {
     width: 152px;
   }
 
+  /* MARCAS */
   .marcas {
     padding: 32px 0;
   }
@@ -1374,6 +1355,7 @@ main {
     height: 60px;
   }
 
+  /* SIGNIFICADO */
   .significado {
     padding: 64px var(--margen-lateral);
   }
@@ -1382,6 +1364,7 @@ main {
     font-size: 28px;
   }
 
+  /* PRESENTACIÓN */
   .presentacion {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -1396,7 +1379,7 @@ main {
     margin-bottom: 24px;
   }
 
-  /* FOOTER: una columna */
+  /* FOOTER */
   .footer__arriba {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -1417,7 +1400,7 @@ main {
     overflow-wrap: anywhere;
   }
 
-    /* EL CAMP */
+  /* CARRUSEL */
   .carrusel {
     padding: 56px 0 0;
   }
@@ -1426,7 +1409,6 @@ main {
     gap: 16px;
   }
 
-  /* Una foto por vista */
   .carrusel__foto {
     flex: 0 0 100%;
   }
@@ -1435,11 +1417,12 @@ main {
     margin-top: 20px;
   }
 
+  /* INTRODUCCIÓN */
   .camp-intro {
     padding: 40px var(--margen-lateral) 56px;
   }
 
-  /* Foto arriba y panel rosa debajo */
+  /* ACTIVIDADES */
   .actividades {
     grid-template-columns: 1fr;
   }
@@ -1473,6 +1456,7 @@ main {
     font-size: 14px;
   }
 
+  /* CASA */
   .casa {
     padding: 48px var(--margen-lateral);
   }
@@ -1489,7 +1473,8 @@ main {
   .casa__texto {
     font-size: 15px;
   }
-
+  
+  /* MAPA */
   .mapa {
     padding: 0 var(--margen-lateral) 48px;
   }
@@ -1498,7 +1483,7 @@ main {
     height: 320px;
   }
 
-  /* Foto arriba y preguntas debajo */
+  /* FAQ */
   .faq {
     grid-template-columns: 1fr;
   }
@@ -1525,7 +1510,7 @@ main {
     padding: 16px 0;
   }
 
-    /* TARIFAS */
+  /* TARIFAS */
   .tarifas {
     padding: 48px var(--margen-lateral) 32px;
   }
@@ -1535,7 +1520,6 @@ main {
     font-size: 28px;
   }
 
-  /* Una tarjeta por fila, sin pasarse de ancho */
   .tarifas__lista {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -1549,12 +1533,12 @@ main {
     font-size: 15px;
   }
 
-  /* En táctil no hay hover: se evita que la tarjeta se quede "subida" tras tocarla */
   .tarifa:hover {
     transform: none;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   }
 
+  /* INCLUYE */
   .incluye {
     padding: 16px var(--margen-lateral) 56px;
   }
@@ -1567,6 +1551,7 @@ main {
     font-size: 15px;
   }
 
+  /* FOTO PLAYA */
   .tarifas-playa {
     aspect-ratio: 4 / 3;
   }
@@ -1576,7 +1561,6 @@ main {
     padding: 16px var(--margen-lateral);
   }
 
-  /* Una columna: la reserva arriba y el formulario debajo */
   .compra {
     grid-template-columns: 1fr;
     min-height: 0;
@@ -1586,7 +1570,6 @@ main {
     font-size: 22px;
   }
 
-  /* Columna de la reserva */
   .reserva-col {
     padding: 32px var(--margen-lateral);
     border-right: none;
@@ -1620,7 +1603,6 @@ main {
     display: none;
   }
 
-  /* Columna del formulario */
   .pago-col {
     padding: 32px var(--margen-lateral) 48px;
   }
@@ -1629,7 +1611,6 @@ main {
     margin-top: 16px;
   }
 
-  /* 16px evita que el iPhone haga zoom al pulsar un campo */
   .campo,
   .semanas__boton,
   .tarjeta__campos input {
@@ -1660,7 +1641,6 @@ main {
     padding: 14px 12px;
   }
 
-  /* Si el texto ocupa varias líneas, la casilla se queda arriba */
   .acepto {
     align-items: flex-start;
     gap: 12px;
@@ -1695,7 +1675,6 @@ main {
     font-size: 26px;
   }
 
-  /* Etiqueta encima y valor debajo: así caben varias semanas sin apretarse */
   .modal__resumen div {
     flex-direction: column;
     gap: 4px;
