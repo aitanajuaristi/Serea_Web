@@ -1184,6 +1184,75 @@ main {
   .footer__copy {
     grid-column: 1;
   }
+
+   /* EL CAMP */
+  .carrusel {
+    padding: 80px 0 0;
+  }
+
+  .carrusel__pista {
+    gap: 24px;
+  }
+
+  .carrusel__foto {
+    flex: 0 0 calc((100% - 48px) / 3);
+  }
+
+  .carrusel__puntos {
+    margin-top: 24px;
+  }
+
+  .camp-intro {
+    padding: 64px var(--margen-lateral) 80px;
+  }
+
+  /* La altura fija de 620px se quita: el contenido manda */
+  .actividades {
+    grid-template-columns: 38% 62%;
+    height: auto;
+  }
+
+  .actividades__panel {
+    padding: 32px;
+  }
+
+  .actividades__lista {
+    gap: 40px;
+    margin-top: 40px;
+    padding-right: 0;
+  }
+
+  .casa {
+    padding: 64px var(--margen-lateral);
+  }
+
+  .casa__fotos {
+    gap: 16px;
+  }
+
+  .casa__titulo {
+    margin-top: 48px;
+  }
+
+  .mapa {
+    padding: 0 var(--margen-lateral) 64px;
+  }
+
+  .mapa__iframe {
+    height: 400px;
+  }
+
+  .faq {
+    grid-template-columns: 35% 65%;
+  }
+
+  .faq__contenido {
+    padding: 64px var(--margen-lateral);
+  }
+
+  .faq__item {
+    width: 100%;
+  }
 }
 
 
@@ -1338,7 +1407,113 @@ main {
     padding: 4px 0;
     overflow-wrap: anywhere;
   }
+
+    /* EL CAMP */
+  .carrusel {
+    padding: 56px 0 0;
+  }
+
+  .carrusel__pista {
+    gap: 16px;
+  }
+
+  /* Una foto por vista */
+  .carrusel__foto {
+    flex: 0 0 100%;
+  }
+
+  .carrusel__puntos {
+    margin-top: 20px;
+  }
+
+  .camp-intro {
+    padding: 40px var(--margen-lateral) 56px;
+  }
+
+  /* Foto arriba y panel rosa debajo */
+  .actividades {
+    grid-template-columns: 1fr;
+  }
+
+  .actividades__foto {
+    height: 320px;
+  }
+
+  .actividades__panel {
+    padding: 40px 24px;
+    border-left: none;
+    border-top: 1px solid var(--color-texto);
+  }
+
+  .actividades__titulo {
+    font-size: 28px;
+  }
+
+  .actividades__intro {
+    font-size: 14px;
+  }
+
+  .actividades__lista {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .actividad__titulo,
+  .actividad__texto {
+    font-size: 14px;
+  }
+
+  .casa {
+    padding: 48px var(--margen-lateral);
+  }
+
+  .casa__fotos {
+    grid-template-columns: 1fr;
+  }
+
+  .casa__titulo {
+    margin-top: 40px;
+    font-size: 28px;
+  }
+
+  .casa__texto {
+    font-size: 15px;
+  }
+
+  .mapa {
+    padding: 0 var(--margen-lateral) 48px;
+  }
+
+  .mapa__iframe {
+    height: 320px;
+  }
+
+  /* Foto arriba y preguntas debajo */
+  .faq {
+    grid-template-columns: 1fr;
+  }
+
+  .faq__foto {
+    height: 280px;
+  }
+
+  .faq__contenido {
+    padding: 48px var(--margen-lateral);
+  }
+
+  .faq__titulo {
+    margin-bottom: 32px;
+    font-size: 28px;
+  }
+
+  .faq__pregunta,
+  .faq__respuesta {
+    font-size: 15px;
+  }
+
+  .faq__pregunta {
+    padding: 16px 0;
+  }
 }
 
-/* ---------- EL CAMP (pendiente) ---------- */
-/* ---------- TARIFAS (pendiente) ---------- */
