@@ -574,13 +574,9 @@ ul {
   object-fit: cover;
 }
 
-/* ==========================================================
-   PÁGINA COMPRA
-   Sustituye todo el bloque de Compra de styles.css por este
-   (va antes de la sección "7. RESPONSIVE").
-   ========================================================== */
+/* PAGINA DE COMPRA  */
 
-/* ---------- Barra superior (solo flecha) ---------- */
+/* BARRA */
 .compra-barra {
   padding: 1.2rem var(--margen-lateral);
   border-bottom: 1px solid var(--color-texto);
@@ -592,7 +588,7 @@ ul {
   height: 1.5rem;
 }
 
-/* ---------- Dos columnas: ocupan justo una pantalla ---------- */
+/* LAYOUT */
 .compra {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -605,7 +601,7 @@ ul {
   font-weight: 400;
 }
 
-/* ---------- Columna izquierda: reserva ---------- */
+/* RESERVA */
 .reserva-col {
   display: flex;
   flex-direction: column;
@@ -621,7 +617,6 @@ ul {
   background-color: var(--color-azul);
 }
 
-/* Un color por tarifa (los pone compra.js) */
 .reserva--junior {
   background-color: var(--color-azul);
 }
@@ -670,7 +665,6 @@ ul {
   font-size: 1.5rem;
 }
 
-/* Logo negro abajo a la izquierda */
 .reserva-col__logo {
   margin-top: auto;
   padding-top: 2rem;
@@ -685,7 +679,7 @@ ul {
   font-size: 0.95rem;
 }
 
-/* ---------- Columna derecha: formulario ---------- */
+/* FORMULARIO */
 .pago-col {
   padding: clamp(2rem, 8vh, 5rem) var(--margen-lateral) clamp(2rem, 8vh, 5rem) 4rem;
 }
@@ -716,14 +710,12 @@ ul {
   font-weight: 500;
 }
 
-/* Semanas o día: cada bloque va con su etiqueta */
 .seleccion {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
 }
 
-/* El día solo se ve en Serea Day (compra.js pone la clase pago--day) */
 .seleccion--dia {
   display: none;
 }
@@ -736,7 +728,6 @@ ul {
   display: flex;
 }
 
-/* Campos de texto */
 .campo {
   width: 100%;
   padding: 0.55rem 0.9rem;
@@ -753,7 +744,7 @@ ul {
   color: #757575;
 }
 
-/* ---------- Selector de semanas ---------- */
+/* SEMANAS */
 .semanas {
   position: relative;
 }
@@ -779,7 +770,6 @@ ul {
   color: #757575;
 }
 
-/* Cuando ya hay semanas elegidas, el texto pasa a negro */
 .semanas__texto.elegido {
   color: var(--color-texto);
 }
@@ -830,7 +820,7 @@ ul {
   color: #757575;
 }
 
-/* ---------- Método de pago: tarjeta ---------- */
+/* TARJETA */
 .tarjeta {
   display: flex;
   flex-direction: column;
@@ -854,7 +844,6 @@ ul {
   color: #555555;
 }
 
-/* Número, caducidad y CVC unidos en un solo recuadro */
 .tarjeta__campos {
   margin-bottom: 1rem;
   border: 1px solid #6b6b6b;
@@ -872,7 +861,6 @@ ul {
   border: none;
 }
 
-/* Línea entre el número y MM/AA + CVC */
 .tarjeta__campos .tarjeta__numero {
   border-bottom: 1px solid #6b6b6b;
 }
@@ -886,7 +874,7 @@ ul {
   border-left: 1px solid #6b6b6b;
 }
 
-/* ---------- Aceptar términos ---------- */
+/* TÉRMINOS Y PAGAR */
 .acepto {
   display: flex;
   align-items: center;
@@ -907,7 +895,6 @@ ul {
   text-decoration: underline;
 }
 
-/* ---------- Botón Pagar ---------- */
 .pagar {
   width: 100%;
   margin-top: 1.2rem;
@@ -926,7 +913,6 @@ ul {
   background-color: #8f4a4f;
 }
 
-/* ---------- Validación del formulario ---------- */
 .campo-caja {
   display: flex;
   flex-direction: column;
@@ -950,7 +936,7 @@ ul {
   color: #b3261e;
 }
 
-/* ---------- Ventana modal ---------- */
+/* MODAL */
 .modal {
   display: none;
   position: fixed;
@@ -1000,7 +986,6 @@ ul {
   font-weight: 400;
 }
 
-/* Caja con las tres filas */
 .modal__resumen {
   margin-bottom: 1.5rem;
   text-align: left;

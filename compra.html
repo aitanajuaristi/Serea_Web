@@ -6,15 +6,13 @@
     <title>Compra</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-  <!-- BARRA SUPERIOR: solo la flecha para volver a Tarifas -->
+  <!-- BARRA SUPERIOR -->
   <header class="compra-barra">
     <a class="compra-barra__volver" href="tarifas.html" aria-label="Volver a tarifas">
       <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -24,12 +22,9 @@
   </header>
 
   <main class="compra">
-
-    <!-- COLUMNA IZQUIERDA: resumen de la reserva -->
+    <!-- RESERVA -->
     <section class="reserva-col">
       <h1 class="compra__titulo">Tu reserva</h1>
-
-      <!-- compra.js cambia el color, el texto y el precio según la tarifa -->
       <article class="reserva reserva--junior">
         <h2 class="reserva__marca">Serea Surf Camp</h2>
         <p class="reserva__texto">Incluye 7 días y 6 noches de alojamiento compartido, pensión completa, clases diarias de surf con material incluido, actividades deportivas y recreativas, excursiones y supervisión de monitores durante toda la estancia.</p>
@@ -42,14 +37,13 @@
           <p class="reserva__precio">650€</p>
         </div>
       </article>
-
       <div class="reserva-col__logo">
         <img src="img/logo-serea-negro.png" alt="Serea">
         <p>Surf Camp</p>
       </div>
     </section>
 
-    <!-- COLUMNA DERECHA: formulario -->
+    <!-- FORMULARIO -->
     <section class="pago-col">
       <form class="pago" action="#">
 
@@ -62,7 +56,7 @@
           <input class="campo" type="tel" name="telefono" placeholder="Teléfono *" aria-label="Teléfono" required>
         </div>
 
-        <!-- SEMANAS (Junior y Adults): desplegable con casillas, se puede elegir más de una -->
+        <!-- SEMANAS -->
         <div class="seleccion seleccion--semanas">
           <p class="pago__etiqueta" id="semanas-etiqueta">Semanas del campamento *</p>
 
@@ -78,8 +72,6 @@
                 <path d="M2 2L8 8L14 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-
-            <!-- Pon aquí las fechas reales de cada semana -->
             <div class="semanas__lista" id="semanas-lista">
               <label class="semanas__opcion">
                 <input type="checkbox" name="semanas" value="Semana 1 · 22-28 jun">
@@ -105,14 +97,15 @@
           </div>
         </div>
 
-        <!-- DÍA (solo Serea Day): un único día dentro de la temporada -->
+        <!-- DÍA -->
         <div class="seleccion seleccion--dia">
           <label class="pago__etiqueta" for="dia">Día de la jornada *</label>
           <input class="campo" type="date" id="dia" name="dia" min="2027-06-01" max="2027-09-30">
         </div>
 
         <h2 class="compra__titulo compra__titulo--pago">Método de pago</h2>
-
+        
+        <!-- TARJETA -->
         <div class="tarjeta">
           <p class="tarjeta__titulo">
             <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -135,6 +128,7 @@
           <input class="campo campo--tarjeta" type="text" id="titular" name="titular" placeholder="Nombre completo" autocomplete="cc-name" required>
         </div>
 
+        <!-- TÉRMINOS Y PAGAR -->
         <label class="acepto">
           <input type="checkbox" name="acepto" required>
           <span>Acepto los <a href="#">términos y condiciones</a> de uso y la <a href="#">política de privacidad</a>.</span>
@@ -147,6 +141,7 @@
 
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__arriba">
       <div class="footer__marca">
@@ -187,7 +182,7 @@
     </div>
   </footer>
 
-  <!-- VENTANA MODAL: se abre cuando el formulario es correcto -->
+  <!-- MODAL -->
   <div class="modal" id="modal">
     <div class="modal__caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
       <button type="button" class="modal__cerrar" aria-label="Cerrar">×</button>
@@ -214,9 +209,10 @@
     </div>
   </div>
 
-  <!-- jQuery desde CDN (versión fija) -->
+  <!-- SCRIPTS -->
+  <!-- jQuery  -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- Solo en la página de compra: tarifa, semanas/día, validación y modal -->
+  <!-- MI SCRIPT  -->
   <script src="js/compra.js"></script>
 </body>
 
