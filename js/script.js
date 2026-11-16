@@ -1,9 +1,5 @@
-// ==========================================================
-// SEREA SURF CAMP - script.js
-// Requiere jQuery (se carga antes que este archivo)
-// ==========================================================
 
-// Cabecera blanca al hacer scroll o con el menú abierto
+// CABECERA 
 function actualizarCabecera() {
   var hayScroll = $(window).scrollTop() > 10;
   var menuAbierto = $(".header__boton").hasClass("abierto");
@@ -13,7 +9,7 @@ function actualizarCabecera() {
 $(window).on("scroll", actualizarCabecera);
 actualizarCabecera();
 
-// Menú móvil
+// MENU MOVIL 
 $(".header__boton").on("click", function () {
   $(".header__nav").toggleClass("abierto");
   $(this).toggleClass("abierto");
@@ -21,17 +17,16 @@ $(".header__boton").on("click", function () {
 });
 
 
-// ---------- ANIMACIONES AL HACER SCROLL (AOS) ----------
+// ANIMACIONES AOS 
 if (typeof AOS !== "undefined") {
   AOS.init({
-    duration: 800,       // más rápido que los 2000 del ejemplo: aquí es contenido real
+    duration: 800,       
     offset: 100,
     easing: "ease-out",
-    once: true,          // solo se anima la primera vez
+    once: true,          
     disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches
   });
 
-  // Cuando cargan las imágenes cambian las alturas: AOS recalcula
   $(window).on("load", function () {
     AOS.refresh();
   });

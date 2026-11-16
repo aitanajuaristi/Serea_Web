@@ -1,8 +1,5 @@
-// ==========================================================
-// SEREA SURF CAMP - parallax.js
-// Solo se carga en index.html. Requiere SimpleParallax.
-// ==========================================================
 
+// PARALLAX
 var imagenes = document.querySelectorAll(".parallax");
 
 new SimpleParallax(imagenes, {
