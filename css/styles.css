@@ -1288,6 +1288,36 @@ main {
   .tarifas-playa {
     aspect-ratio: 2 / 1;
   }
+
+  /* COMPRA */
+  .reserva-col {
+    padding: 48px 32px 48px var(--margen-lateral);
+  }
+
+  .pago-col {
+    padding: 48px var(--margen-lateral) 48px 32px;
+  }
+
+  .reserva {
+    padding: 20px;
+  }
+
+  .reserva__pie {
+    margin-top: 32px;
+  }
+
+  .reserva-col__logo img {
+    width: 160px;
+  }
+
+  /* Email y teléfono caben mal lado a lado en columnas estrechas */
+  .pago__fila {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta {
+    padding: 16px;
+  }
 }
 
 
@@ -1595,6 +1625,140 @@ main {
 
   .tarifas-playa {
     aspect-ratio: 4 / 3;
+  }
+
+  /* COMPRA */
+  .compra-barra {
+    padding: 16px var(--margen-lateral);
+  }
+
+  /* Una columna: la reserva arriba y el formulario debajo */
+  .compra {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .compra__titulo {
+    font-size: 22px;
+  }
+
+  /* Columna de la reserva */
+  .reserva-col {
+    padding: 32px var(--margen-lateral);
+    border-right: none;
+    border-bottom: 1px solid var(--color-texto);
+  }
+
+  .reserva {
+    padding: 20px;
+  }
+
+  .reserva__marca {
+    padding-bottom: 16px;
+    font-size: 20px;
+  }
+
+  .reserva__texto {
+    margin-top: 16px;
+    font-size: 15px;
+  }
+
+  .reserva__pie {
+    margin-top: 24px;
+  }
+
+  .reserva__etiqueta,
+  .reserva__nombre {
+    font-size: 14px;
+  }
+
+ .reserva-col__logo {
+    display: none;
+  }
+
+  /* Columna del formulario */
+  .pago-col {
+    padding: 32px var(--margen-lateral) 48px;
+  }
+
+  .pago .compra__titulo--pago {
+    margin-top: 16px;
+  }
+
+  /* 16px evita que el iPhone haga zoom al pulsar un campo */
+  .campo,
+  .semanas__boton,
+  .tarjeta__campos input {
+    font-size: 16px;
+  }
+
+  .campo,
+  .semanas__boton {
+    min-height: 48px;
+    min-width: 0;
+  }
+
+  .semanas__opcion {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+
+  .semanas__opcion input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .tarjeta__titulo {
+    font-size: 18px;
+  }
+
+  .tarjeta__campos input {
+    padding: 14px 12px;
+  }
+
+  /* Si el texto ocupa varias líneas, la casilla se queda arriba */
+  .acepto {
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  .acepto input {
+    width: 22px;
+    height: 22px;
+  }
+
+  .pagar {
+    min-height: 52px;
+    font-size: 20px;
+  }
+
+  /* MODAL */
+  .modal__caja {
+    max-height: calc(100dvh - 32px);
+    padding: 40px 24px 32px;
+  }
+
+  .modal__cerrar {
+    top: 8px;
+    right: 8px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .modal__titulo {
+    font-size: 26px;
+  }
+
+  /* Etiqueta encima y valor debajo: así caben varias semanas sin apretarse */
+  .modal__resumen div {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .modal__resumen dd {
+    text-align: left;
   }
 }
 
