@@ -284,99 +284,6 @@ ul {
   margin-bottom: 2rem;
 }
  
-/* ==========================================================
-   7. RESPONSIVE (PROVISIONAL)
-   Solo el menú móvil, hasta tener los diseños de móvil y tablet.
-   ========================================================== */
- 
-/* Escritorio: el menú siempre visible.
-   !important porque jQuery deja un display en línea al plegar el menú
-   en móvil, y así no desaparece si se agranda la ventana. */
-@media (min-width: 768px) {
-  .header__nav {
-    display: block;
-  }
-}
- 
-/* Móvil: logo y botón en una fila, y el menú desplegable debajo */
-@media (max-width: 767px) {
-  .header {
-    flex-wrap: wrap;
-    padding: 0 1.5rem;
-  }
- 
-  .header__barra {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 1rem 0;
-  }
- 
-  /* Botón hamburguesa */
-  .header__boton {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 0.5rem;
-    color: inherit;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
- 
-  .header__boton span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: currentColor;
-    transition: transform 0.25s ease, opacity 0.25s ease;
-  }
- 
-  /* Clase que añade jQuery: las tres barras forman una X */
-  .header__boton.abierto span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
- 
-  .header__boton.abierto span:nth-child(2) {
-    opacity: 0;
-  }
- 
-  .header__boton.abierto span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
- 
-  /* El menú empieza oculto: jQuery lo despliega.
-     Los márgenes negativos lo estiran a todo el ancho de la pantalla */
-  .header__nav {
-    max-height: 0;
-    overflow: hidden;
-    margin: 0 -1.5rem;
-    padding: 0 1.5rem;
-    width: calc(100% + 3rem);
-    color: var(--color-texto);
-    background-color: var(--color-fondo);
-    transition: max-height 0.6s ease, padding 0.6s ease;
-  }
-
- .header__nav.abierto {
-    max-height: 9rem;              /* antes: 20rem */
-    padding: 0.5rem 1.5rem 1rem;
-  }
- 
-  .header__lista {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .header__link {
-    display: block;
-    padding: 1rem 0;
-    border-top: 1px solid currentColor;
-    border-top-color: rgba(128, 128, 128, 0.4);
-  }
-
-}
 
 
 /* ==========================================================
@@ -1176,3 +1083,262 @@ ul {
 .modal__boton:hover {
   background-color: var(--color-texto);
 }
+
+/* ==========================================================
+   7. RESPONSIVE
+   Tablet: hasta 1024px · Móvil: hasta 767px
+   (El camp y Tarifas, pendientes)
+   ========================================================== */
+
+/* El menú siempre visible en escritorio.
+   !important porque jQuery deja un display en línea al plegarlo en móvil */
+@media (min-width: 768px) {
+  .header__nav {
+    display: block !important;
+    max-height: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  overflow-x: clip; /* el parallax no genera scroll horizontal */
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+@media (max-width: 1024px) {
+
+  :root {
+    --margen-lateral: 32px;
+  }
+
+  /* HOME */
+  .hero {
+    padding-bottom: 64px;
+  }
+
+  .hero__logo {
+    width: 176px;
+  }
+
+  .marcas {
+    padding: 40px 0;
+  }
+
+  .marcas__pista img {
+    height: 56px;
+    margin: 0 40px;
+  }
+
+  .marcas__pista .marcas__billabong {
+    height: 80px;
+  }
+
+  .significado {
+    padding: 80px var(--margen-lateral);
+  }
+
+  .presentacion {
+    gap: 32px;
+    padding: 64px var(--margen-lateral);
+  }
+
+  /* FOOTER: marca arriba y 3 columnas debajo */
+  .footer {
+    padding: 48px var(--margen-lateral) 40px;
+  }
+
+  .footer__arriba {
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 0;
+    gap: 40px 32px;
+  }
+
+  .footer__arriba > :nth-child(3) {
+    max-width: none;
+  }
+
+  .footer__marca {
+    grid-column: 1 / -1;
+  }
+
+  .footer__logo {
+    margin-top: 0;
+  }
+
+  .footer__email {
+    margin-top: 20px;
+  }
+
+  .footer__abajo {
+    grid-template-columns: 1fr;
+    padding-top: 24px;
+  }
+
+  .footer__copy {
+    grid-column: 1;
+  }
+}
+
+
+/* ==========================================================
+   MÓVIL
+   ========================================================== */
+@media (max-width: 767px) {
+
+  :root {
+    --margen-lateral: 24px;
+  }
+
+  /* HEADER */
+  .header {
+    flex-wrap: wrap;
+    padding: 0 24px;
+  }
+
+  .header__barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px 0;
+  }
+
+  .header__boton {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .header__boton span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: currentColor;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .header__boton.abierto span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .header__boton.abierto span:nth-child(2) { opacity: 0; }
+  .header__boton.abierto span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  .header__nav {
+    max-height: 0;
+    overflow: hidden;
+    margin: 0 -24px;
+    padding: 0 24px;
+    width: calc(100% + 48px);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    transition: max-height 0.6s ease, padding 0.6s ease;
+  }
+
+  .header__nav.abierto {
+    max-height: 144px;
+    padding: 8px 24px 16px;
+  }
+
+  .header__lista {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .header__link {
+    display: block;
+    padding: 16px 0;
+    border-top: 1px solid rgba(128, 128, 128, 0.4);
+  }
+
+  /* BOTÓN */
+  .boton {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* HOME */
+  .hero {
+    height: 100svh;
+    min-height: 500px;
+    padding-bottom: 48px;
+  }
+
+  .hero__logo {
+    width: 152px;
+  }
+
+  .marcas {
+    padding: 32px 0;
+  }
+
+  .marcas__pista {
+    animation-duration: 18s;
+  }
+
+  .marcas__pista img {
+    height: 40px;
+    margin: 0 28px;
+  }
+
+  .marcas__pista .marcas__billabong {
+    height: 60px;
+  }
+
+  .significado {
+    padding: 64px var(--margen-lateral);
+  }
+
+  .significado__titulo {
+    font-size: 28px;
+  }
+
+  .presentacion {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 48px var(--margen-lateral);
+  }
+
+  .presentacion__contenido {
+    max-width: none;
+  }
+
+  .presentacion__texto {
+    margin-bottom: 24px;
+  }
+
+  /* FOOTER: una columna */
+  .footer__arriba {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer__logo {
+    width: 136px;
+  }
+
+  .footer__titulo {
+    margin-bottom: 16px;
+  }
+
+  .footer__email,
+  .footer__lista a {
+    display: inline-block;
+    padding: 4px 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* ---------- EL CAMP (pendiente) ---------- */
+/* ---------- TARIFAS (pendiente) ---------- */
