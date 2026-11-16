@@ -486,13 +486,9 @@ ul {
   font-size: 0.9rem;
 }
 
-/* ==========================================================
-   PÁGINA TARIFAS
-   Sustituye todo el bloque de Tarifas de styles.css por este
-   (va antes de la sección "7. RESPONSIVE").
-   ========================================================== */
+/* PAGINA TARIFAS  */
 
-/* ---------- Elige tu experiencia ---------- */
+/* TARIFAS */
 .tarifas {
   padding: 5rem var(--margen-lateral) 4rem;
 }
@@ -511,7 +507,6 @@ ul {
   gap: 2.5rem;
 }
 
-/* Tarjeta: la altura es igual en las tres y el precio queda abajo */
 .tarifa {
   display: flex;
   flex-direction: column;
@@ -521,13 +516,11 @@ ul {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Al pasar el ratón: la tarjeta sube un poco y la sombra crece */
 .tarifa:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* La imagen mantiene su proporción: no se recorta */
 .tarifa__foto {
   display: block;
   width: 100%;
@@ -555,7 +548,7 @@ ul {
   font-size: 0.85rem;
 }
 
-/* ---------- Todas las tarifas incluyen ---------- */
+/* TODAS LAS TARIFAS INCLUYEN */
 .incluye {
   padding: 2rem var(--margen-lateral) 6rem;
   text-align: center;
@@ -574,7 +567,7 @@ ul {
   line-height: 1.35;
 }
 
-/* ---------- Foto de la playa ---------- */
+/* FOTO PLAYA */
 .tarifas-playa {
   width: 100%;
   aspect-ratio: 3 / 1;
