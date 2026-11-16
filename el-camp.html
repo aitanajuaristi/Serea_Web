@@ -6,28 +6,23 @@
     <title>El Camp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- AOS  -->
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-<!-- CABECERA (blanca, sin la clase transparente) -->
+  <!-- HEADER  -->
   <header class="header">
     <div class="header__barra">
       <a class="header__logo" href="index.html">Serea</a>
-
-      <!-- Solo se ve en móvil -->
       <button class="header__boton" type="button" aria-label="Abrir menú">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </div>
-
-    <!-- En móvil está oculto hasta pulsar el botón -->
     <nav class="header__nav">
       <ul class="header__lista">
         <li><a class="header__link" href="el-camp.html">El camp</a></li>
@@ -37,7 +32,6 @@
   </header>
 
   <main>
-
     <!-- CARRUSEL -->
     <section class="carrusel">
       <div class="carrusel__ventana">
@@ -50,16 +44,15 @@
           <img class="carrusel__foto" src="img/carrusel-6.jpg" alt="Chicas haciendo un picnic sobre el césped">
         </div>
       </div>
-      <!-- Los puntos los crea carrusel.js -->
       <div class="carrusel__puntos"></div>
     </section>
 
-    <!-- TEXTO DE PRESENTACIÓN -->
+    <!-- INTRODUCCIÓN  -->
     <section class="camp-intro">
       <p class="camp-intro__texto" data-aos="fade-up">Serea Surf Camp nace en 2022 de la mano de un grupo de amigas gallegas que compartían su pasión por el surf. Después de años recorriendo diferentes playas, decidieron crear su propio campamento en Razo, un lugar con el que siempre habían tenido una conexión especial. Lo que comenzó como una pequeña iniciativa entre amigas fue creciendo hasta convertirse en un espacio que reúne cada verano a chicas de diferentes lugares. Con el tiempo, Serea ha incorporado nuevas actividades y experiencias, manteniendo siempre la cercanía, el compañerismo y el respeto por el mar que dieron origen al proyecto.</p>
     </section>
 
-    <!-- ¿QUÉ HACEMOS EN SEREA? -->
+    <!-- ACTIVIDADES    -->
     <section class="actividades">
       <img class="actividades__foto" src="img/que-hacemos.jpg" alt="Chicas haciendo yoga frente al mar">
 
@@ -91,7 +84,7 @@
       </div>
     </section>
 
-    <!-- NUESTRA CASA -->
+    <!-- NUESTRA CASA  -->
     <section class="casa">
       <div class="casa__fotos">
         <img class="casa__foto" data-aos="fade-up" data-aos-delay="0" src="img/casa-1.jpg" alt="Mesa preparada en el jardín de la casa">
@@ -168,6 +161,7 @@
 
   </main>
 
+  <!-- FOOTER  -->
   <footer class="footer">
     <div class="footer__arriba">
       <div class="footer__marca">
@@ -208,15 +202,14 @@
     </div>
   </footer>
 
-  <!-- jQuery desde CDN (versión fija) -->
+  <!-- SCRIPTS -->
+  <!-- jQuery   -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <!-- AOS  -->
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Común a todas las páginas: menú y cabecera -->
+  <!-- MI SCRIPT -->
   <script src="js/script.js"></script>
-  <!-- Solo en El Camp -->
   <script src="js/carrusel.js"></script>
   <script src="js/faq.js"></script>    
-    
 </body>
 </html>

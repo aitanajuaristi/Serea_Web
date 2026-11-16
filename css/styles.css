@@ -84,14 +84,13 @@ ul {
   border-bottom-color: var(--color-texto);
 }
  
-/* ---------- 4. FOOTER ---------- */
+/* FOOTER  */
 .footer {
   padding: 4rem var(--margen-lateral) 3rem;
   background-color: var(--color-crema);
   border-top: 1px solid var(--color-texto);
 }
 
-/* Las dos filas comparten las mismas columnas */
 .footer__arriba,
 .footer__abajo {
   display: grid;
@@ -99,7 +98,6 @@ ul {
   gap: 2rem;
 }
 
-/* Fila de arriba: logo + columnas, con la línea debajo */
 .footer__arriba {
   min-height: 14.5rem;
   padding-bottom: 1.75rem;
@@ -110,7 +108,6 @@ ul {
   max-width: 220px;
 }
 
-/* Logo arriba y email pegado al final de la fila */
 .footer__marca {
   display: flex;
   flex-direction: column;
@@ -129,7 +126,6 @@ ul {
   transition: background-size 0.3s ease;
 }
 
-/* Al pasar el ratón: se dibuja una línea bajo el correo */
 .footer__email:hover {
   background-size: 100% 1px;
 }
@@ -144,7 +140,6 @@ ul {
   margin-bottom: 0.4rem;
 }
 
-/* Fila de abajo: el © queda en la columna de Términos */
 .footer__abajo {
   padding-top: 2.1rem;
 }
@@ -152,8 +147,8 @@ ul {
 .footer__copy {
   grid-column: 4;
 }
- 
-/* ---------- 5. COMPONENTES COMUNES ---------- */
+
+/* BOTON  */
 .boton {
   display: inline-block;
   padding: 0.5rem 0.8rem;
@@ -172,9 +167,10 @@ ul {
   color: var(--color-fondo);
 }
  
-/* ---------- 6. PÁGINA DE INICIO ---------- */
- 
-/* Hero: foto a pantalla completa con el logo abajo a la izquierda */
+
+/* INDEX */
+
+/* HERO  */
 .hero {
   display: flex;
   flex-direction: column;
@@ -194,8 +190,8 @@ ul {
   margin-top: 0.5rem;
   font-size: 0.95rem;
 }
- 
-/* Franja de logos de marcas: carrusel infinito */
+
+/* MARCAS */ 
 .marcas {
   overflow: hidden;
   padding: 4rem 0;
@@ -224,12 +220,11 @@ ul {
   to   { transform: translateX(-25%); }
 }
  
-/* Bloque azul con textura */
+/* SIGNIFICADO */
 .significado {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 7rem var(--margen-lateral);
   text-align: center;
   background: var(--color-azul) url("../img/textura-azul.jpg") center / cover;
@@ -247,7 +242,7 @@ ul {
   max-width: 56rem;
 }
  
-/* Foto + texto con botón */
+/* PRESENTACIÓN */
 .presentacion {
   display: grid;
   grid-template-columns: 45fr 55fr;
@@ -267,19 +262,10 @@ ul {
 .presentacion__texto {
   margin-bottom: 2rem;
 }
- 
 
+/* EL CAMP  */
 
-/* ==========================================================
-   PÁGINA EL CAMP
-   Pega todo este bloque en styles.css, antes de la
-   sección "7. RESPONSIVE".
-   ========================================================== */
- 
-   
-/* ---------- Carrusel de fotos ---------- */
-/* ---------- Carrusel de fotos ---------- */
-
+/* CARRUSEL */
 .carrusel {
   padding: 6rem 0 0;
 }
@@ -289,6 +275,7 @@ ul {
   max-width: 1500px;
   margin: 0 auto;
   overflow: hidden;
+  touch-action: pan-y;
 }
 
 .carrusel__pista {
@@ -327,8 +314,8 @@ ul {
 .carrusel__punto.activo {
   opacity: 1;
 }
- 
-/* ---------- Texto bajo el carrusel ---------- */
+
+/* INTRODUCCIÓN */
 .camp-intro {
   padding: 5rem var(--margen-lateral) 7rem;
   text-align: center;
@@ -339,8 +326,7 @@ ul {
   margin: 0 auto;
 }
  
-/* ---------- ¿Qué hacemos en Serea? ---------- */
-
+/* ACTIVIDADES */
 .actividades {
   display: grid;
   grid-template-columns: 43% 57%;
@@ -351,7 +337,6 @@ ul {
 }
 
 .actividades__foto {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -399,7 +384,7 @@ ul {
   font-size: 0.8rem;
 }
  
-/* ---------- Nuestra casa ---------- */
+/* NUESTRA CASA */
 .casa {
   padding: 5rem var(--margen-lateral);
 }
@@ -428,7 +413,7 @@ ul {
   font-size: 0.9rem;
 }
  
-/* ---------- Mapa ---------- */
+/* MAPA */
 .mapa {
   padding: 0 var(--margen-lateral) 5rem;
 }
@@ -440,7 +425,7 @@ ul {
   border: 0;
 }
  
-/* ---------- Preguntas frecuentes ---------- */
+/* FAQ */
 .faq {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -482,7 +467,6 @@ ul {
   cursor: pointer;
 }
  
-/* El + a la derecha, creado con CSS */
 .faq__pregunta::after {
   content: "+";
   margin-left: auto;
@@ -492,12 +476,10 @@ ul {
   transition: transform 0.25s ease;
 }
  
-/* Clase que añade jQuery: el + gira y se convierte en x */
 .faq__pregunta.abierto::after {
   transform: rotate(45deg);
 }
  
-/* Respuesta oculta por defecto: jQuery la despliega */
 .faq__respuesta {
   display: none;
   padding-bottom: 1.2rem;

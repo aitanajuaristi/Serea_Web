@@ -1,79 +1,114 @@
-// ==========================================================
-// SEREA SURF CAMP - carrusel.js
-// Solo se carga en el-camp.html. Requiere jQuery.
-// ==========================================================
- 
+
+// CARRUSEL
 var pista = $(".carrusel__pista");
 var contenedorPuntos = $(".carrusel__puntos");
- 
-var total = pista.children().length;   // 6 fotos
-var visibles = 3;                      // fotos que se ven a la vez
-var duracion = 600;                    // ms, igual que el transition del CSS
-var actual = 0;                        // posición actual (empieza en 0)
+
+var total = pista.children().length;
+var visibles = 3;
+var duracion = 600;
+var actual = 0;
 var temporizador;
 var reinicio;
- 
-// Copiamos las 3 primeras fotos al final para que el bucle no tenga saltos
+
+// CLONES
 pista.children().slice(0, visibles).clone()
   .attr("alt", "")
   .attr("aria-hidden", "true")
   .appendTo(pista);
- 
+
 var fotos = pista.children();
- 
-// Un punto por foto
+
+// PUNTOS
 for (var i = 0; i < total; i++) {
   contenedorPuntos.append('<button type="button" class="carrusel__punto" aria-label="Ir a la foto ' + (i + 1) + '"></button>');
 }
 var puntos = $(".carrusel__punto");
- 
-// Igual que mostrar(n) de clase, pero desplazando la pista en vez de hacer fade
+
+// MOSTRAR
 function mostrar(n, animar) {
   actual = n;
- 
+
   if (animar === false) {
     pista.css("transition", "none");
   }
- 
+
   pista.css("transform", "translateX(-" + fotos.eq(actual).position().left + "px)");
- 
+
   if (animar === false) {
-    pista[0].offsetWidth;            // fuerza el repintado antes de devolver la transición
+    pista[0].offsetWidth;
     pista.css("transition", "");
   }
- 
+
   puntos.removeClass("activo").eq(actual % total).addClass("activo");
 }
- 
+
+// AVANCE AUTOMÁTICO
 function siguiente() {
   mostrar(actual + 1);
- 
-  // Al llegar a las copias, volvemos al principio sin que se note
+
   if (actual === total) {
     reinicio = setTimeout(function () {
       mostrar(0, false);
     }, duracion);
   }
 }
- 
-// Avance automático cada 4 segundos
+
+function anterior() {
+  if (actual === 0) {
+    mostrar(total, false);
+  }
+  mostrar(actual - 1);
+}
+
 function arrancar() {
   clearInterval(temporizador);
   temporizador = setInterval(siguiente, 4000);
 }
- 
-// Al pulsar un punto: vamos a esa foto y reiniciamos el avance automático
+
+// CLICK EN PUNTOS
 puntos.on("click", function () {
   clearTimeout(reinicio);
   mostrar($(this).index());
   arrancar();
 });
- 
-// Si cambia el tamaño de la ventana, recolocamos
+
+// SWIPE
+var inicioX = 0;
+var inicioY = 0;
+
+pista[0].addEventListener("touchstart", function (e) {
+  inicioX = e.touches[0].clientX;
+  inicioY = e.touches[0].clientY;
+}, { passive: true });
+
+pista[0].addEventListener("touchend", function (e) {
+  var difX = e.changedTouches[0].clientX - inicioX;
+  var difY = e.changedTouches[0].clientY - inicioY;
+
+  if (Math.abs(difX) < 50 || Math.abs(difX) < Math.abs(difY)) {
+    return;
+  }
+
+  clearTimeout(reinicio);
+
+  if (actual >= total) {
+    mostrar(0, false);
+  }
+
+  if (difX < 0) {
+    siguiente();
+  } else {
+    anterior();
+  }
+
+  arrancar();
+}, { passive: true });
+
+// RESIZE
 $(window).on("resize", function () {
   mostrar(actual, false);
 });
- 
+
+// INICIO
 mostrar(0, false);
 arrancar();
- 
