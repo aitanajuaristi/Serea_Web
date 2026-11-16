@@ -1253,6 +1253,41 @@ main {
   .faq__item {
     width: 100%;
   }
+
+   /* TARIFAS */
+  /* Las 3 tarjetas no caben en fila con 24rem: se ajustan al ancho disponible */
+  .tarifas {
+    padding: 64px var(--margen-lateral) 48px;
+  }
+
+  .tarifas__titulo {
+    margin-bottom: 32px;
+  }
+
+  .tarifas__lista {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .tarifa {
+    padding: 16px;
+  }
+
+  .tarifa__nombre {
+    margin-top: 16px;
+  }
+
+  .tarifa__texto {
+    margin-bottom: 16px;
+  }
+
+  .incluye {
+    padding: 24px var(--margen-lateral) 80px;
+  }
+
+  .tarifas-playa {
+    aspect-ratio: 2 / 1;
+  }
 }
 
 
@@ -1514,6 +1549,52 @@ main {
 
   .faq__pregunta {
     padding: 16px 0;
+  }
+
+    /* TARIFAS */
+  .tarifas {
+    padding: 48px var(--margen-lateral) 32px;
+  }
+
+  .tarifas__titulo {
+    margin-bottom: 32px;
+    font-size: 28px;
+  }
+
+  /* Una tarjeta por fila, sin pasarse de ancho */
+  .tarifas__lista {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .tarifa__nombre,
+  .tarifa__texto,
+  .tarifa__precio {
+    font-size: 15px;
+  }
+
+  /* En táctil no hay hover: se evita que la tarjeta se quede "subida" tras tocarla */
+  .tarifa:hover {
+    transform: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+
+  .incluye {
+    padding: 16px var(--margen-lateral) 56px;
+  }
+
+  .incluye__titulo {
+    font-size: 22px;
+  }
+
+  .incluye__texto {
+    font-size: 15px;
+  }
+
+  .tarifas-playa {
+    aspect-ratio: 4 / 3;
   }
 }
 
