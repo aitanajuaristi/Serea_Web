@@ -5,6 +5,7 @@
   --color-fondo: #ffffff;
   --color-azul: #c1d8dd;
   --color-rosa: #b1656a;
+  --color-rosa-oscuro: #8f4f54;
   --color-crema: #f7f0e6;
   --fuente: "Work Sans", Arial, sans-serif;
   --margen-lateral: 3.5rem;
@@ -436,6 +437,8 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 80%;
+  display: block;
 }
  
 .faq__contenido {
@@ -909,7 +912,7 @@ ul {
 }
 
 .pagar:hover {
-  background-color: #8f4a4f;
+  background-color: var(--color-rosa-oscuro)
 }
 
 /* VALIDACIÓN */
@@ -1020,7 +1023,7 @@ ul {
 }
 
 .modal__boton:hover {
-  background-color: var(--color-texto);
+  background-color: var(--color-rosa-oscuro);
 }
 
 /* RESPONSIVE  */
@@ -1175,6 +1178,11 @@ ul {
     width: 100%;
   }
 
+  .faq__foto {
+    height: 28rem;           
+    object-position: 50% 85%;
+  }
+  
   /* TARIFAS */
   .tarifas {
     padding: 64px var(--margen-lateral) 48px;
